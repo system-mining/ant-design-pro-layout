@@ -2,7 +2,6 @@ import './BasicLayout.less';
 
 import React, { CSSProperties, useContext, useEffect } from 'react';
 import { BreadcrumbProps as AntdBreadcrumbProps } from 'antd/es/breadcrumb';
-import { Helmet } from 'react-helmet';
 import { Layout } from 'antd';
 import classNames from 'classnames';
 import warning from 'warning';
@@ -407,9 +406,6 @@ const BasicLayout: React.FC<BasicLayoutProps> = props => {
   }, []);
   return (
     <>
-      <Helmet>
-        <title>{pageTitleInfo.title}</title>
-      </Helmet>
       <MenuCounter.Provider>
         <div className={className}>
           <Layout
